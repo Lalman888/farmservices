@@ -88,7 +88,7 @@ const SellerForm = () => {
   return (
     <>
       <section className="bg-primary-foreground py-28">
-        <div className="container">
+        <div className="px-28">
           <div className="rounded-xl bg-white px-14 py-8">
             <h2 className=" w-full border-b border-solid border-inputBorder pb-5 font-crimson text-2xl font-semibold">
               Become a Seller
@@ -97,7 +97,7 @@ const SellerForm = () => {
             // onSubmit={formik.handleSubmit}
             >
               <div className="mb-6 flex gap-x-40">
-                <div className="w-1/2">
+                <div className="w-1/2 flex flex-col">
                   <label className=" mb-2 text-xs text-secondary-foreground">
                     Date of Incorporation
                   </label>
@@ -110,7 +110,7 @@ const SellerForm = () => {
                     // //value={formik.//values.dateOfIncorporation}
                   />
                 </div>
-                <div className="w-1/2">
+                <div className="w-1/2 flex flex-col">
                   <label className=" mb-2 text-xs text-secondary-foreground">
                     LEI Number (Optional)
                   </label>
@@ -126,7 +126,7 @@ const SellerForm = () => {
                 </div>
               </div>
               <div className="mb-6 flex gap-x-40">
-                <div className="w-1/2">
+                <div className="w-1/2 flex flex-col">
                   <label className=" mb-2 text-xs text-secondary-foreground">
                     Parent Company (Optional)
                   </label>
@@ -140,7 +140,7 @@ const SellerForm = () => {
                     //value={formik.//values.parentCompany}
                   />
                 </div>
-                <div className="w-1/2">
+                <div className="w-1/2 flex flex-col">
                   <label className=" mb-2 text-xs text-secondary-foreground">
                     Active Clients
                   </label>
@@ -156,7 +156,7 @@ const SellerForm = () => {
                 </div>
               </div>
               <div className="mb-6 flex gap-x-40">
-                <div className="w-1/2">
+                <div className="w-1/2 flex flex-col">
                   <label className=" mb-2 text-xs text-secondary-foreground">
                     Company Profile
                   </label>
@@ -170,7 +170,7 @@ const SellerForm = () => {
                     //value={formik.//values.companyProfile}
                   />
                 </div>
-                <div className="w-1/2">
+                <div className="w-1/2 flex flex-col">
                   <label className=" mb-2 text-xs text-secondary-foreground">
                     Product Category
                   </label>
@@ -182,7 +182,7 @@ const SellerForm = () => {
                 </div>
               </div>
               <div className="mb-6 flex gap-x-40">
-                <div className="w-1/2">
+                <div className="w-1/2 flex flex-col">
                   <label className=" mb-2 text-xs text-secondary-foreground">
                     Line of Business
                   </label>
@@ -192,7 +192,7 @@ const SellerForm = () => {
                     // setInputvalue={setLineOfBusiness//value}
                   />
                 </div>
-                <div className="w-1/2">
+                <div className="w-1/2 flex flex-col">
                   <label className=" mb-2 text-xs text-secondary-foreground">
                     Turnover of Last Year in USD (Optional)
                   </label>
@@ -208,7 +208,7 @@ const SellerForm = () => {
                 </div>
               </div>
               <div className="mb-6 flex gap-x-40">
-                <div className="w-1/2">
+                <div className="w-1/2 flex flex-col">
                   <label className=" mb-2 text-xs text-secondary-foreground">
                     Production Capacity (Units/Month)
                   </label>
@@ -218,16 +218,16 @@ const SellerForm = () => {
                     data={["10", "100", "1000", "10000", "100000"]}
                   />
                 </div>
-                <div className="flex w-1/2 items-center">
+                <div className="flex w-1/2  flex-col items-center">
                   {/* <Checkbox
                     checked={formik.//values.eligibilityForDigitalCatalogue}
                     onCheck={formik.handleChange}
                     name="eligibilityForDigitalCatalogue"
                   /> */}
-                  <input type="checkbox" className="checkbox" />
+                  {/* <input type="checkbox" className="checkbox" />
                   <label className="ml-2 text-xs text-secondary-foreground">
                     Share Digital Showroom
-                  </label>
+                  </label> */}
                 </div>
               </div>
               <div className="flex justify-center">
