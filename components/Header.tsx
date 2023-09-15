@@ -30,20 +30,33 @@ function Headernav() {
           <div className="sm:flex">
             <ul className="hidden sm:flex ">
               <li className={styles.navLink}>
-                <Link href="/seller">Seller</Link>
+                <Link href="/seller">
+                  Farmers
+                </Link>
               </li>
               <li className={styles.navLink}>
-                <Link href="/buyer">Buyer</Link>
+                <Link href="/buyer">
+                  Consumer
+                </Link>
               </li>
+              <li className={styles.navLink}>
+                <Link href="/transport">Transport</Link>
+              </li> 
+              {/* <li className={styles.navLink}>
+                <Link href="/crop">
+                  Crop
+                </Link>
+              </li>  */}
+
               <li className={styles.navLink}>
                 <Link href="/contact">Contact Us</Link>
               </li>
               <li className={styles.navLink}>
                 <Link href="/about">About</Link>
               </li>
-              <li className={styles.navLink}>
+              {/* <li className={styles.navLink}>
                 <Link href="/account">Account</Link>
-              </li>
+              </li> */}
               <li className=" flex mr-12 ml-40 items-center space-x-5 text-yellow-300 text-xl">
                <Link href="/auth/login">
                <h3 className=" animate-bounce repeat-5 ... duration-10000  hover:animate-none delay-100 shadow-sm  cursor-pointer px-4 py-1 rounded-sm bg-emerald-500 text-black">
