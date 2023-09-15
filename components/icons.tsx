@@ -1,34 +1,35 @@
-import {
-    LucideProps,
-    Moon,
-    SunMedium,
-    Twitter,
+// import {
+//     LucideProps,
+//     Moon,
+//     SunMedium,
+//     Twitter,
     
-    type Icon as LucideIcon,
-  } from "lucide-react"
+//     type { icons } as icons,
+//   } from "lucide-react"
+import { Moon,icons,SunMedium,Twitter } from 'lucide-react';
   
-  export type Icon = LucideIcon
+  // export type Icon = icons
   
   export const Icons = {
     sun: SunMedium,
     moon: Moon,
     twitter: Twitter,
-    logo: (props: LucideProps) => (
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" {...props}>
+    logo: () => (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
         <path
           fill="currentColor"
           d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z"
         />
       </svg>
     ),
-    lineArrow: (props: LucideProps) => (
+    lineArrow: () => (
       <svg
         width="124"
         height="20"
         viewBox="0 0 124 20"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className={props.className}
+        //   
       >
         <path
           d="M1 9.44678H121"
@@ -44,7 +45,7 @@ import {
         />
       </svg>
     ),
-    lineArrowDark: (props: LucideProps) => (
+    lineArrowDark: () => (
       <svg
         width="83"
         height="17"
@@ -67,15 +68,15 @@ import {
       </svg>
     ),
   
-    gitHub: (props: LucideProps) => (
-      <svg viewBox="0 0 438.549 438.549" {...props}>
+    gitHub: () => (
+      <svg viewBox="0 0 438.549 438.549" >
         <path
           fill="currentColor"
           d="M409.132 114.573c-19.608-33.596-46.205-60.194-79.798-79.8-33.598-19.607-70.277-29.408-110.063-29.408-39.781 0-76.472 9.804-110.063 29.408-33.596 19.605-60.192 46.204-79.8 79.8C9.803 148.168 0 184.854 0 224.63c0 47.78 13.94 90.745 41.827 128.906 27.884 38.164 63.906 64.572 108.063 79.227 5.14.954 8.945.283 11.419-1.996 2.475-2.282 3.711-5.14 3.711-8.562 0-.571-.049-5.708-.144-15.417a2549.81 2549.81 0 01-.144-25.406l-6.567 1.136c-4.187.767-9.469 1.092-15.846 1-6.374-.089-12.991-.757-19.842-1.999-6.854-1.231-13.229-4.086-19.13-8.559-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-.951-2.568-2.098-3.711-3.429-1.142-1.331-1.997-2.663-2.568-3.997-.572-1.335-.098-2.43 1.427-3.289 1.525-.859 4.281-1.276 8.28-1.276l5.708.853c3.807.763 8.516 3.042 14.133 6.851 5.614 3.806 10.229 8.754 13.846 14.842 4.38 7.806 9.657 13.754 15.846 17.847 6.184 4.093 12.419 6.136 18.699 6.136 6.28 0 11.704-.476 16.274-1.423 4.565-.952 8.848-2.383 12.847-4.285 1.713-12.758 6.377-22.559 13.988-29.41-10.848-1.14-20.601-2.857-29.264-5.14-8.658-2.286-17.605-5.996-26.835-11.14-9.235-5.137-16.896-11.516-22.985-19.126-6.09-7.614-11.088-17.61-14.987-29.979-3.901-12.374-5.852-26.648-5.852-42.826 0-23.035 7.52-42.637 22.557-58.817-7.044-17.318-6.379-36.732 1.997-58.24 5.52-1.715 13.706-.428 24.554 3.853 10.85 4.283 18.794 7.952 23.84 10.994 5.046 3.041 9.089 5.618 12.135 7.708 17.705-4.947 35.976-7.421 54.818-7.421s37.117 2.474 54.823 7.421l10.849-6.849c7.419-4.57 16.18-8.758 26.262-12.565 10.088-3.805 17.802-4.853 23.134-3.138 8.562 21.509 9.325 40.922 2.279 58.24 15.036 16.18 22.559 35.787 22.559 58.817 0 16.178-1.958 30.497-5.853 42.966-3.9 12.471-8.941 22.457-15.125 29.979-6.191 7.521-13.901 13.85-23.131 18.986-9.232 5.14-18.182 8.85-26.84 11.136-8.662 2.286-18.415 4.004-29.263 5.146 9.894 8.562 14.842 22.077 14.842 40.539v60.237c0 3.422 1.19 6.279 3.572 8.562 2.379 2.279 6.136 2.95 11.276 1.995 44.163-14.653 80.185-41.062 108.068-79.226 27.88-38.161 41.825-81.126 41.825-128.906-.01-39.771-9.818-76.454-29.414-110.049z"
         ></path>
       </svg>
     ),
-    contentPaper: (props: LucideProps) => (
+    contentPaper: () => (
       <svg
         width="50"
         height="50"
@@ -99,7 +100,7 @@ import {
         </defs>
       </svg>
     ),
-    patientRegister: (props: LucideProps) => (
+    patientRegister: () => (
       <svg
         width="50"
         height="50"
@@ -165,7 +166,7 @@ import {
         </defs>
       </svg>
     ),
-    uploadPic: (props: LucideProps) => (
+    uploadPic: () => (
       <svg
         width="50"
         height="50"
@@ -238,7 +239,7 @@ import {
         </defs>
       </svg>
     ),
-    listEdit: (props: LucideProps) => (
+    listEdit: () => (
       <svg
         width="50"
         height="50"
@@ -297,7 +298,7 @@ import {
         </defs>
       </svg>
     ),
-    paidHand: (props: LucideProps) => (
+    paidHand: () => (
       <svg
         width="50"
         height="50"
@@ -363,7 +364,7 @@ import {
         </defs>
       </svg>
     ),
-    twistedArrow: (props: LucideProps) => (
+    twistedArrow: () => (
       <svg
         width="49"
         height="17"
@@ -385,7 +386,7 @@ import {
         />
       </svg>
     ),
-    starFour: (props: LucideProps) => (
+    starFour: () => (
       <svg
         width="30"
         height="30"
@@ -399,12 +400,12 @@ import {
         />
       </svg>
     ),
-    greentag: (props: LucideProps) => (
+    greentag: () => (
       <svg
         width="115"
         height="32"
         viewBox="0 0 115 32"
-        className={props.className}
+          
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -504,7 +505,7 @@ import {
       </svg>
     ),
   
-    certificateA: (props: LucideProps) => (
+    certificateA: () => (
       <svg
         width="16"
         height="16"
@@ -560,7 +561,7 @@ import {
         </defs>
       </svg>
     ),
-    clipboardText: (props: LucideProps) => (
+    clipboardText: () => (
       <svg
         width="16"
         height="16"
@@ -605,13 +606,13 @@ import {
         />
       </svg>
     ),
-    paperEdit: (props: LucideProps) => (
+    paperEdit: () => (
       <svg
         width="16"
         height="16"
         viewBox="0 0 16 16"
         fill="none"
-        className={props.className}
+          
         xmlns="http://www.w3.org/2000/svg"
       >
         <g clipPath="url(#clip0_76_391)">
@@ -630,12 +631,12 @@ import {
         </defs>
       </svg>
     ),
-    greenIcon: (props: LucideProps) => (
+    greenIcon: () => (
       <svg
         width="32"
         height="32"
         viewBox="0 0 32 32"
-        className={props.className}
+          
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -729,7 +730,7 @@ import {
         />
       </svg>
     ),
-    home: (props: LucideProps) => (
+    home: () => (
       <svg
         width="16"
         height="16"
@@ -767,7 +768,7 @@ import {
         </defs>
       </svg>
     ),
-    billMonitor: (props: LucideProps) => (
+    billMonitor: () => (
       <svg
         width="16"
         height="16"
@@ -847,7 +848,7 @@ import {
         </defs>
       </svg>
     ),
-    bookCloth: (props: LucideProps) => (
+    bookCloth: () => (
       <svg
         width="16"
         height="16"
@@ -885,7 +886,7 @@ import {
         />
       </svg>
     ),
-    Currency: (props: LucideProps) => (
+    Currency: () => (
       <svg
         width="16"
         height="16"
@@ -986,7 +987,7 @@ import {
         </defs>
       </svg>
     ),
-    laptopHelp: (props: LucideProps) => (
+    laptopHelp: () => (
       <svg
         width="16"
         height="16"
@@ -1048,7 +1049,7 @@ import {
         </defs>
       </svg>
     ),
-    ManCard: (props: LucideProps) => (
+    ManCard: () => (
       <svg
         width="16"
         height="16"
@@ -1093,7 +1094,7 @@ import {
         </defs>
       </svg>
     ),
-    Store: (props: LucideProps) => (
+    Store: () => (
       <svg
         width="16"
         height="16"
@@ -1152,7 +1153,7 @@ import {
         </defs>
       </svg>
     ),
-    Trips: (props: LucideProps) => (
+    Trips: () => (
       <svg
         width="16"
         height="16"
@@ -1204,7 +1205,7 @@ import {
         </defs>
       </svg>
     ),
-    bellNotification: (props: LucideProps) => (
+    bellNotification: () => (
       <svg
         width="16"
         height="16"
@@ -1228,7 +1229,7 @@ import {
         />
       </svg>
     ),
-    Messages: (props: LucideProps) => (
+    Messages: () => (
       <svg
         width="20"
         height="20"
@@ -1266,18 +1267,18 @@ import {
         </defs>
       </svg>
     ),
-    NewProduct: (props: LucideProps) => (
+    NewProduct: () => (
       <svg
         width="80"
         height="80"
         viewBox="0 0 80 80"
-        className={props.className}
+          
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M42.6667 70H7.66667C5.89856 70 4.20286 69.2976 2.95262 68.0474C1.70238 66.7971 1 65.1014 1 63.3333V11.6667C1 9.89856 1.70238 8.20286 2.95262 6.95262C4.20286 5.70238 5.89856 5 7.66667 5H71C72.7681 5 74.4638 5.70238 75.714 6.95262C76.9643 8.20286 77.6667 9.89856 77.6667 11.6667V48.3333"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -1286,130 +1287,130 @@ import {
           cx="64"
           cy="64"
           r="13"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
         />
         <path
           d="M64 56L64 72"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M56 65H72"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M1 21.666H77.6667"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M51 44.9993H57.6667L54.9633 34.1893C54.7828 33.4685 54.3665 32.8287 53.7807 32.3715C53.1949 31.9144 52.4731 31.666 51.73 31.666H44.3333C44.3333 32.9921 43.8065 34.2639 42.8689 35.2016C41.9312 36.1392 40.6594 36.666 39.3333 36.666C38.0072 36.666 36.7355 36.1392 35.7978 35.2016C34.8601 34.2639 34.3333 32.9921 34.3333 31.666H26.9367C26.1936 31.666 25.4718 31.9144 24.886 32.3715C24.3002 32.8287 23.8839 33.4685 23.7033 34.1893L21 44.9993H27.6667V58.3327H39.3333"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M12.6663 14.1667C12.4453 14.1667 12.2334 14.0789 12.0771 13.9226C11.9208 13.7663 11.833 13.5543 11.833 13.3333C11.833 13.1123 11.9208 12.9004 12.0771 12.7441C12.2334 12.5878 12.4453 12.5 12.6663 12.5"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
         />
         <path
           d="M12.666 14.1667C12.887 14.1667 13.099 14.0789 13.2553 13.9226C13.4116 13.7663 13.4993 13.5543 13.4993 13.3333C13.4993 13.1123 13.4116 12.9004 13.2553 12.7441C13.099 12.5878 12.887 12.5 12.666 12.5"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
         />
         <path
           d="M23.2493 14.1667C23.0283 14.1667 22.8164 14.0789 22.6601 13.9226C22.5038 13.7663 22.416 13.5543 22.416 13.3333C22.416 13.1123 22.5038 12.9004 22.6601 12.7441C22.8164 12.5878 23.0283 12.5 23.2493 12.5"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
         />
         <path
           d="M23.25 14.1667C23.471 14.1667 23.683 14.0789 23.8393 13.9226C23.9955 13.7663 24.0833 13.5543 24.0833 13.3333C24.0833 13.1123 23.9955 12.9004 23.8393 12.7441C23.683 12.5878 23.471 12.5 23.25 12.5"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
         />
         <path
           d="M33.8333 14.1667C33.6123 14.1667 33.4004 14.0789 33.2441 13.9226C33.0878 13.7663 33 13.5543 33 13.3333C33 13.1123 33.0878 12.9004 33.2441 12.7441C33.4004 12.5878 33.6123 12.5 33.8333 12.5"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
         />
         <path
           d="M33.833 14.1667C34.054 14.1667 34.266 14.0789 34.4223 13.9226C34.5785 13.7663 34.6663 13.5543 34.6663 13.3333C34.6663 13.1123 34.5785 12.9004 34.4223 12.7441C34.266 12.5878 34.054 12.5 33.833 12.5"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
         />
       </svg>
     ),
-    bulkUpload: (props: LucideProps) => (
+    bulkUpload: () => (
       <svg
         width="80"
         height="80"
         viewBox="0 0 80 80"
-        className={props.className}
+          
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M5 20.0137H75"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M15.0002 12.5133C14.8348 12.5134 14.6732 12.5626 14.5359 12.6548C14.3986 12.7469 14.2918 12.8779 14.2291 13.0309C14.1665 13.184 14.1508 13.3522 14.184 13.5142C14.2173 13.6762 14.298 13.8247 14.4158 13.9407C14.5337 14.0567 14.6835 14.1349 14.846 14.1656C15.0085 14.1962 15.1764 14.1778 15.3285 14.1127C15.4805 14.0476 15.6097 13.9387 15.6996 13.7999C15.7896 13.6611 15.8362 13.4987 15.8336 13.3333C15.8336 13.1123 15.7458 12.9004 15.5895 12.7441C15.4332 12.5878 15.2212 12.5 15.0002 12.5"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M21.6662 12.5133C21.5009 12.5134 21.3392 12.5626 21.2019 12.6548C21.0646 12.7469 20.9578 12.8779 20.8951 13.0309C20.8325 13.184 20.8168 13.3522 20.85 13.5142C20.8833 13.6762 20.964 13.8247 21.0819 13.9407C21.1997 14.0567 21.3495 14.1349 21.512 14.1656C21.6745 14.1962 21.8425 14.1778 21.9945 14.1127C22.1465 14.0476 22.2757 13.9387 22.3657 13.7999C22.4556 13.6611 22.5022 13.4987 22.4996 13.3333C22.4996 13.1123 22.4118 12.9004 22.2555 12.7441C22.0992 12.5878 21.8872 12.5 21.6662 12.5"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M28.3332 12.5133C28.1678 12.5134 28.0062 12.5626 27.8689 12.6548C27.7316 12.7469 27.6248 12.8779 27.5621 13.0309C27.4995 13.184 27.4838 13.3522 27.517 13.5142C27.5503 13.6762 27.631 13.8247 27.7489 13.9407C27.8667 14.0567 28.0165 14.1349 28.179 14.1656C28.3415 14.1962 28.5095 14.1778 28.6615 14.1127C28.8135 14.0476 28.9427 13.9387 29.0326 13.7999C29.1226 13.6611 29.1692 13.4987 29.1666 13.3333C29.1666 13.1123 29.0788 12.9004 28.9225 12.7441C28.7662 12.5878 28.5542 12.5 28.3332 12.5"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M21.6667 56.666H11.7533C9.97663 56.6679 8.2709 55.9689 7.00649 54.7207C5.74208 53.4725 5.02107 51.7759 5 49.9994V13.3327C5.0202 11.5558 5.74094 9.85877 7.00553 8.6104C8.27013 7.36203 9.97636 6.66327 11.7533 6.66602H68.42C69.2911 6.66729 70.1532 6.84122 70.9566 7.17778C71.7601 7.51433 72.4888 8.00682 73.1007 8.62677C73.7126 9.24672 74.1955 9.98182 74.5215 10.7896C74.8475 11.5973 75.0101 12.4617 75 13.3327V49.9994C75.0101 50.8704 74.8475 51.7347 74.5215 52.5425C74.1955 53.3502 73.7126 54.0853 73.1007 54.7053C72.4888 55.3252 71.7601 55.8177 70.9566 56.1543C70.1532 56.4908 69.2911 56.6648 68.42 56.666H58.3333"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M54.9997 48.347L41.6663 35.0137L28.333 48.347"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M41.667 73.347V35.0137"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
       </svg>
     ),
-    paperEditDark: (props: LucideProps) => (
+    paperEditDark: () => (
       <svg
         width="16"
         height="16"
@@ -1434,12 +1435,12 @@ import {
       </svg>
     ),
   
-    Clock: (props: LucideProps) => (
+    Clock: () => (
       <svg
         width="80"
         height="80"
         viewBox="0 0 80 80"
-        className={props.className}
+          
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -1463,7 +1464,7 @@ import {
         </defs>
       </svg>
     ),
-    CatalogBook: (props: LucideProps) => (
+    CatalogBook: () => (
       <svg
         width="80"
         height="80"
@@ -1473,21 +1474,21 @@ import {
       >
         <path
           d="M55.5169 77.5H10.6836C8.69447 77.5 6.78682 76.7098 5.38029 75.3033C3.97377 73.8968 3.18359 71.9891 3.18359 70"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M65.1836 25.1667V5.00006C65.1836 4.67034 65.1184 4.34389 64.9917 4.03948C64.865 3.73508 64.6794 3.45874 64.4455 3.22637C64.2116 2.994 63.934 2.8102 63.6288 2.68555C63.3235 2.5609 62.9966 2.49786 62.6669 2.50006H13.1836C10.5314 2.50006 7.98789 3.55362 6.11253 5.42899C4.23716 7.30435 3.18359 9.84789 3.18359 12.5001V70.0001C3.18359 68.0109 3.97377 66.1033 5.38029 64.6968C6.78682 63.2902 8.69447 62.5001 10.6836 62.5001H33.1836"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M21 14C21 12.8954 21.8954 12 23 12H47C48.1046 12 49 12.8954 49 14V22C49 23.1046 48.1046 24 47 24H23C21.8954 24 21 23.1046 21 22V14Z"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -1496,26 +1497,26 @@ import {
           cx="58"
           cy="52"
           r="17"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
         />
         <path
           d="M58 41.1992L58 62.7992"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M47.2002 52.9004H68.8002"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
       </svg>
     ),
-    QuotationM: (props: LucideProps) => (
+    QuotationM: () => (
       <svg
         width="80"
         height="80"
@@ -1525,7 +1526,7 @@ import {
       >
         <path
           d="M41 21H63"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1533,7 +1534,7 @@ import {
         />
         <path
           d="M18 32L63 32"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1541,7 +1542,7 @@ import {
         />
         <path
           d="M17.9375 42.2188H63"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1549,7 +1550,7 @@ import {
         />
         <path
           d="M17.9375 52.7188H63"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1557,7 +1558,7 @@ import {
         />
         <path
           d="M17.9375 63H63"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1565,7 +1566,7 @@ import {
         />
         <path
           d="M10.5996 18.1191C10.5996 19.5591 12.0396 20.9991 13.4796 20.9991"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1573,7 +1574,7 @@ import {
         />
         <path
           d="M13.4796 15.2402C12.0396 15.2402 10.5996 16.6802 10.5996 18.1202"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1581,7 +1582,7 @@ import {
         />
         <path
           d="M16.3605 18.1202C16.3605 16.6802 14.9205 15.2402 13.4805 15.2402"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1589,7 +1590,7 @@ import {
         />
         <path
           d="M13.4805 20.9991C14.9205 20.9991 16.3605 19.5591 16.3605 18.1191"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1597,7 +1598,7 @@ import {
         />
         <path
           d="M13.12 3C9.88 4.8 7 8.04 7 12C7 15.96 8.8 20.64 13.48 21"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1605,7 +1606,7 @@ import {
         />
         <path
           d="M26.7598 18.1191C26.7598 19.5591 28.1998 20.9991 29.6398 20.9991"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1613,7 +1614,7 @@ import {
         />
         <path
           d="M29.6398 15.2402C28.1998 15.2402 26.7598 16.6802 26.7598 18.1202"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1621,7 +1622,7 @@ import {
         />
         <path
           d="M32.5187 18.1202C32.5187 16.6802 31.0787 15.2402 29.6387 15.2402"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1629,7 +1630,7 @@ import {
         />
         <path
           d="M29.6387 20.9991C31.0787 20.9991 32.5187 19.5591 32.5187 18.1191"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1637,7 +1638,7 @@ import {
         />
         <path
           d="M28.9198 3C25.6798 4.8 22.7998 8.04 22.7998 12C22.7998 15.96 24.5998 20.64 29.2798 21"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
@@ -1645,14 +1646,14 @@ import {
         />
         <path
           d="M37.0435 7H68.087C69.6552 7 71.1592 7.75641 72.2681 9.10282C73.377 10.4492 74 12.2754 74 14.1795V69.8205C74 71.7246 73.377 73.5508 72.2681 74.8972C71.1592 76.2436 69.6552 77 68.087 77H11.913C10.3448 77 8.8408 76.2436 7.73189 74.8972C6.62298 73.5508 6 71.7246 6 69.8205V30.3333"
-          stroke={props.color || "#D0D7D9"}
+            //stroke={props.color || "#D0D7D9"}
           strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
       </svg>
     ),
-    media: (props: LucideProps) => (
+    media: () => (
       <svg
         width="16"
         height="12"
@@ -1666,7 +1667,7 @@ import {
         />
       </svg>
     ),
-    mediaIconEmpty: (props: LucideProps) => (
+    mediaIconEmpty: () => (
       <svg
         width="101"
         height="100"
@@ -1692,7 +1693,7 @@ import {
         </defs>
       </svg>
     ),
-    Quotations: (props: LucideProps) => (
+    Quotations: () => (
       <svg
         width="14"
         height="16"
@@ -1706,7 +1707,7 @@ import {
         />
       </svg>
     ),
-    SuccessTick: (props: LucideProps) => (
+    SuccessTick: () => (
       <svg
         width="214"
         height="214"
@@ -1728,7 +1729,7 @@ import {
         />
       </svg>
     ),
-    ArrowRight: (props: LucideProps) => (
+    ArrowRight: () => (
       <svg
         width="68"
         height="14"
@@ -1742,7 +1743,7 @@ import {
         />
       </svg>
     ),
-    TopDownArrow: (props: LucideProps) => (
+    TopDownArrow: () => (
       <svg
         width="14"
         height="31"
@@ -1756,7 +1757,7 @@ import {
         />
       </svg>
     ),
-    ArrowLeft: (props: LucideProps) => (
+    ArrowLeft: () => (
       <svg
         width="109"
         height="14"
@@ -1770,7 +1771,7 @@ import {
         />
       </svg>
     ),
-    offCurved: (props: LucideProps) => (
+    offCurved: () => (
       <svg
         width="87"
         height="109"
@@ -1785,7 +1786,7 @@ import {
         />
       </svg>
     ),
-    horizontalLine: (props: LucideProps) => (
+    horizontalLine: () => (
       <svg
         width="4"
         height="142"
@@ -1801,7 +1802,7 @@ import {
         />
       </svg>
     ),
-    aboutOurCurved: (props: LucideProps) => (
+    aboutOurCurved: () => (
       <svg
         width="210"
         height="58"

@@ -35,7 +35,7 @@ function page() {
           </div>
           <div className="mt-40 flex items-center justify-between">
             <div>
-              <h3 className="inline-flex text-lg text-primary">
+              <h3 className="inline-flex text-xl text-green-400">
                 Sell your Crops at{" "}
                 <span className="ml-1 text-white">Grain</span>
                 <span className="mr-4 text-white">Nexus</span>{" "}
@@ -47,7 +47,7 @@ function page() {
             </div>
             <div>
               <Image
-                src="/supplier/ecof.png"
+                src="/ecof.png"
                 width={463}
                 height={400}
                 alt="Hero"

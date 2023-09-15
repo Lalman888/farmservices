@@ -73,10 +73,14 @@
   body {
     @apply bg-background text-foreground;
   }
+  .input_secondary_nimp{
+    @apply w-full caret-primary rounded border border-solid border-emerald-500 px-3.5 py-4 text-sm text-secondary placeholder:text-secondary-foreground  focus:border-primary focus:outline-primary;
+  }
 }
 h1 {
   font-family:'Josefin Sans', sans-serif;;
 }
+
 
 @layer utilities{
 .animation-delay-2000{
@@ -85,4 +89,5 @@ animation-delay: 2s;
 .animation-delay-4000{
 animation-delay: 4s;
 }
+
 }
