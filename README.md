@@ -16,7 +16,7 @@ To get started with the frontend of our website, follow these steps:
 
 2. Navigate to the project directory:
    ```
-   cd farmservices
+   cd grainNexus
    ```
 
 3. Install the project dependencies:
