@@ -22,7 +22,7 @@ export default function Home() {
           
         }
           transition={{ duration: 0.5 }}
-          className="flex justify-center"
+          className="flex justify-center top-16 relative left-[-2%]"
         >
           <div className="flex pb-36 ">
             <div className=" text-5xl justify-start w-3/4 font-bold mx-12 mt-24 mb-4 ">

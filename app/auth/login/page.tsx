@@ -2,9 +2,11 @@
 "use client";
 import Lottie from "react-lottie-player";
 import lottieJson from "@/public/svg/login.json";
+import Headernav from "@/components/Header";
 function login() {
   return (
     <>
+    <Headernav />
       {/* starting parent for login */}
       <div className="flex h-screen bg-gradient-to-r from-stone-200 from-10% via-lime-200 via-70% to-emerald-400 to-95% ...">
         <div className=" grid grid-cols-2 gap-4 -mt-32 place-content-evenly place-items-center  ">
