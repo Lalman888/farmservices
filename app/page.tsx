@@ -9,10 +9,14 @@ import Image from "next/image";
 import Headernav from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
+import MainWeather from "@/components/weather/MainWeather";
+
+
 export default function Home() {
   return (
     <>
       <Headernav />
+      <MainWeather/>
       <div className="flex flex-col items-center ">
         {/* first heading */}
         <motion.div
