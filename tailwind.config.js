@@ -1,9 +1,12 @@
-const { fontFamily } = require("tailwindcss/defaultTheme")
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ["app/**/*.{ts,tsx}", "components/**/*.{ts,tsx}"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+	],
   theme: {
     container: {
       center: true,
@@ -13,6 +16,16 @@ module.exports = {
       },
     },
     extend: {
+      keyframes: {
+        blob:{
+          "0%": { transform: "translate(0px,0px) scale(1)" },
+          "33%": { transform: "translate(30px,-50px) scale(1.1)" },
+          "66%": { transform: "translate(-20px,20px) scale(0.9)" },
+          "100%": { transform: "translate(0px,0px) scale(1)" },
+        }
+      },
+      fontFamily: {
+        karla:['Comforter', 'sans-serif']},
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -49,12 +62,9 @@ module.exports = {
         },
       },
       borderRadius: {
-        lg: `var(--radius)`,
-        md: `calc(var(--radius) - 2px)`,
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      fontFamily: {
-        sans: ["var(--font-sans)", ...fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
@@ -67,8 +77,10 @@ module.exports = {
         },
       },
       animation: {
+         blob:"blob 4s infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        
       },
     },
   },
